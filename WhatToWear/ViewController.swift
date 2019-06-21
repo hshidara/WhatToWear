@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var home = ""
     var commute = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,13 +21,13 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if didRetrieveValues() {
-            print("displaying weather")
-            print(home)
-            print(commute)
+//            print("displaying weather")
+//            print(home)
+//            print(commute)
             displayWeather()
         }
         else{
-            print("querying user")
+//            print("querying user")
             queryUser()
         }
     }
@@ -53,15 +54,17 @@ class ViewController: UIViewController {
     }
     
     func queryUser() {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let QueryViewController = storyBoard.instantiateViewController(withIdentifier: "QueryViewController") as! QueryViewController
-        self.present(QueryViewController, animated:true, completion:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil);
+        let QueryViewController = storyBoard.instantiateViewController(withIdentifier: "QueryViewController") as! QueryViewController;
+        self.present(QueryViewController, animated:true, completion:nil);
     }
     
     func displayWeather() {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let WeatherViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherViewController") as! WeatherViewController
-        self.present(WeatherViewController, animated:true, completion:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil);
+        let WeatherViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherViewController") as! WeatherViewController;
+        WeatherViewController.home = home;
+        WeatherViewController.commute = commute;
+        self.present(WeatherViewController, animated:true, completion:nil);
     }
 }
 

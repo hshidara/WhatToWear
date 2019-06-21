@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		08323E4822AA534F004AA759 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08323E4722AA534F004AA759 /* WeatherViewController.swift */; };
+		088B8C8D22BA051F00082A94 /* UIButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B8C8722BA051F00082A94 /* UIButtonHelper.swift */; };
+		088B8C8E22BA051F00082A94 /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B8C8822BA051F00082A94 /* NSLayoutHelper.swift */; };
+		088B8C8F22BA051F00082A94 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B8C8922BA051F00082A94 /* DeviceHelper.swift */; };
+		088B8C9022BA051F00082A94 /* UITextViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B8C8A22BA051F00082A94 /* UITextViewHelper.swift */; };
+		088B8C9122BA051F00082A94 /* UILabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B8C8B22BA051F00082A94 /* UILabelHelper.swift */; };
+		088B8C9222BA051F00082A94 /* UITextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B8C8C22BA051F00082A94 /* UITextFieldHelper.swift */; };
 		08C7CB6222AA3D1200C2D3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7CB6122AA3D1200C2D3A5 /* AppDelegate.swift */; };
 		08C7CB6422AA3D1200C2D3A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7CB6322AA3D1200C2D3A5 /* ViewController.swift */; };
 		08C7CB6722AA3D1200C2D3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C7CB6522AA3D1200C2D3A5 /* Main.storyboard */; };
@@ -38,6 +44,12 @@
 
 /* Begin PBXFileReference section */
 		08323E4722AA534F004AA759 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		088B8C8722BA051F00082A94 /* UIButtonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonHelper.swift; sourceTree = "<group>"; };
+		088B8C8822BA051F00082A94 /* NSLayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
+		088B8C8922BA051F00082A94 /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		088B8C8A22BA051F00082A94 /* UITextViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
+		088B8C8B22BA051F00082A94 /* UILabelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelHelper.swift; sourceTree = "<group>"; };
+		088B8C8C22BA051F00082A94 /* UITextFieldHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
 		08C7CB5E22AA3D1200C2D3A5 /* WhatToWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C7CB6122AA3D1200C2D3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08C7CB6322AA3D1200C2D3A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +92,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088B8C8622BA051F00082A94 /* Layout Helper */ = {
+			isa = PBXGroup;
+			children = (
+				088B8C8722BA051F00082A94 /* UIButtonHelper.swift */,
+				088B8C8822BA051F00082A94 /* NSLayoutHelper.swift */,
+				088B8C8922BA051F00082A94 /* DeviceHelper.swift */,
+				088B8C8A22BA051F00082A94 /* UITextViewHelper.swift */,
+				088B8C8B22BA051F00082A94 /* UILabelHelper.swift */,
+				088B8C8C22BA051F00082A94 /* UITextFieldHelper.swift */,
+			);
+			name = "Layout Helper";
+			path = "../Layout Helper";
+			sourceTree = SOURCE_ROOT;
+		};
 		08C7CB5522AA3D1200C2D3A5 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +129,7 @@
 		08C7CB6022AA3D1200C2D3A5 /* WhatToWear */ = {
 			isa = PBXGroup;
 			children = (
+				088B8C8622BA051F00082A94 /* Layout Helper */,
 				08C7CB6122AA3D1200C2D3A5 /* AppDelegate.swift */,
 				08C7CB6322AA3D1200C2D3A5 /* ViewController.swift */,
 				08C7CB9422AA4B1100C2D3A5 /* QueryViewController.swift */,
@@ -268,8 +295,14 @@
 				08C7CB6A22AA3D1200C2D3A5 /* WhatToWear.xcdatamodeld in Sources */,
 				08323E4822AA534F004AA759 /* WeatherViewController.swift in Sources */,
 				08C7CB9522AA4B1100C2D3A5 /* QueryViewController.swift in Sources */,
+				088B8C8E22BA051F00082A94 /* NSLayoutHelper.swift in Sources */,
 				08C7CB6422AA3D1200C2D3A5 /* ViewController.swift in Sources */,
+				088B8C9222BA051F00082A94 /* UITextFieldHelper.swift in Sources */,
+				088B8C9022BA051F00082A94 /* UITextViewHelper.swift in Sources */,
+				088B8C8F22BA051F00082A94 /* DeviceHelper.swift in Sources */,
 				08C7CB6222AA3D1200C2D3A5 /* AppDelegate.swift in Sources */,
+				088B8C9122BA051F00082A94 /* UILabelHelper.swift in Sources */,
+				088B8C8D22BA051F00082A94 /* UIButtonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

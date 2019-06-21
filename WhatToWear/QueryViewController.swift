@@ -22,7 +22,6 @@ class QueryViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("in queryviewcontroller")
         // Do any additional setup after loading the view.
     }
     
@@ -31,13 +30,13 @@ class QueryViewController: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Location", in: context)
         let location = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let newHomeTextField:String = (HomeTextField.text as! String).replacingOccurrences(of: " ", with: "%20");
+        let newWorkTextField:String = (WorkTextField.text as! String).replacingOccurrences(of: " ", with: "%20");
 
-//        location.setValue(HomeTextField.text as String, forKey: "home")
-//        location.setValue(WorkTextField.text as String, forKey: "commute")
-
-        location.setValue("Pleasant Hill, CA", forKey: "home")
-        location.setValue("San Francisco, CA", forKey: "commute")
-
+        location.setValue(newHomeTextField, forKey: "home");
+        location.setValue(newWorkTextField, forKey: "commute");
+        
         do {
             try context.save()
         } catch {
@@ -46,9 +45,15 @@ class QueryViewController: UIViewController {
     }
     
     func displayWeather(){
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let WeatherViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherViewController") as! WeatherViewController
-        self.present(WeatherViewController, animated:true, completion:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil);
+        let WeatherViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherViewController") as! WeatherViewController;
+        
+        let newHomeTextField:String = (HomeTextField.text as! String).replacingOccurrences(of: " ", with: "%20");
+        let newWorkTextField:String = (WorkTextField.text as! String).replacingOccurrences(of: " ", with: "%20");
+        
+        WeatherViewController.home = newHomeTextField;
+        WeatherViewController.commute = newWorkTextField;
+        self.present(WeatherViewController, animated:true, completion:nil);
     }
     // MARK: - Navigation
 
