@@ -74,7 +74,6 @@ class WeatherViewController: UIViewController {
                                         self.workImage.load(url:url!);
                                     }
                                 }
-
                             }
                         }
                         if let main = jsonResult!["main"]  as? [String: AnyObject] {
